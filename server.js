@@ -4,7 +4,7 @@ const cors = require('cors')
 const server = require("http").createServer(app);
 const io = require("socket.io")(server, {
     cors: {
-        origin: "https://simple-chat-bice.vercel.app",
+        origin: "https://gakulakov.ru",
         credentials: true
     }
 });
@@ -21,7 +21,7 @@ app.use(express.json()) // Указываю, что серверное прил�
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'https://simple-chat-bice.vercel.app');
+    res.setHeader('Access-Control-Allow-Origin', 'https://gakulakov.ru');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');

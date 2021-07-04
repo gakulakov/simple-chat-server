@@ -95,7 +95,7 @@ io.on('connection', socket => {
 })
 
 
-server.listen(8888, (err) => {
+server.listen(process.env.PORT || 8888, (err) => {
     if (err) throw Error(err)
     console.log('Server has been started!')
 })

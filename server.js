@@ -4,7 +4,7 @@ const cors = require('cors')
 const server = require("http").createServer(app);
 const io = require("socket.io")(server, {
     cors: {
-        origin: "https://simple-chat-tawny.vercel.app",
+        origin: "https://simple-chat-psi.vercel.app/",
         credentials: true
     }
 });

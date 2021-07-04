@@ -1,5 +1,6 @@
 const express = require("express");
 const app = require("express")();
+const cors = require('cors')
 const server = require("http").createServer(app);
 const io = require("socket.io")(server, {
     cors: {
@@ -11,6 +12,7 @@ const io = require("socket.io")(server, {
 
 const rooms = new Map()
 
+app.use(cors())
 
 app.use(express.json()) // Указываю, что серверное приложение может принимать json-данные
 

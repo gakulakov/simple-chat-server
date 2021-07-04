@@ -3,7 +3,7 @@ const app = require("express")();
 const server = require("http").createServer(app);
 const io = require("socket.io")(server, {
     cors: {
-        origin: "*",
+        origin: "https://simple-chat-tawny.vercel.app/",
         credentials: true
     }
 });

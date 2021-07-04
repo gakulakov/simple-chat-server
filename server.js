@@ -12,7 +12,9 @@ const io = require("socket.io")(server, {
 
 const rooms = new Map()
 
-app.use(cors())
+app.use(cors({
+    origin: true
+}))
 
 app.use(express.json()) // Указываю, что серверное приложение может принимать json-данные
 
